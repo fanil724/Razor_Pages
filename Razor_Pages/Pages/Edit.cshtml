@@ -1,0 +1,15 @@
+﻿@page "{id:int}"
+@model Razor_Pages.Pages.EditModel
+<h2>редактирование пользователя</h2>
+<form method="post">
+    <input name="id" value="@Model.Person?.Id" type="hidden"/>
+    <p>
+        <label>Имя</label><br/>
+        <input name="name" value="@Model.Person?.Name"/>
+    </p>
+    <p>
+        <label>Возраст</label><br/>
+        <input name="age" value="@Model.Person?.Age" type="number"/>
+    </p>
+    <input type="submit" value="Сохранить"/>
+</form>
